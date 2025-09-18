@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "fossilspeedrun",
+	"version": "${version}",
+	"name": "F/A Speedrun",
+	"description": "Changes the speedrunigt categories folder location, so new categories can be included in the F/A speedrunning modpack.",
+	"authors": [
+		"legoaggelos"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/project/fossil-speedrun",
+		"sources": "https://github.com/legoaggelos/fossil-speedrun"
+	},
+	"license": "MIT",
+	"icon": "assets/fossilspeedrun/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.legoaggelos.FASpeedrun"
+		],
+		"client": [
+			"com.legoaggelos.FASpeedrunClient"
+		]
+	},
+	"mixins": [
+		"fossil-speedrun.mixins.json",
+		{
+			"config": "fossil-speedrun.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
